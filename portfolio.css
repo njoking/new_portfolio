@@ -232,30 +232,34 @@ section#contact {
     background-color: #003080;
 }
 
-/* Responsive Design */
-@media only screen and (max-width: 600px) {
+/* Add this to your existing CSS for responsive behavior */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
     nav ul {
         display: none;
+        flex-direction: column;
+        align-items: center;
     }
 
     .nav-toggle {
         display: block;
+        cursor: pointer;
     }
 
-    section {
-        margin: 20px;
+    nav ul.active {
+        display: block;
     }
 
-    #home, #about, #portfolio, #services, #contact {
-        padding: 50px 10px;
-    }
-
-    h1, h2, h3, p {
-        font-size: 1.5em;
-    }
-
-    .service, .project {
-        width: 100%;
+    nav a {
+        padding: 10px;
     }
 }
 

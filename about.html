@@ -8,7 +8,9 @@
 </head>
 <body>
     <header>
+        <!-- Toggle button for mobile menu -->
         <div class="nav-toggle" onclick="toggleNav()">&#9776;</div>
+
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -37,5 +39,12 @@
     <footer>
         <p>&copy; 2024 Felister Njoki. All rights reserved.</p>
     </footer>
+    <script>
+        // JavaScript to toggle the navigation menu on mobile
+        function toggleNav() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('active'); // Toggle the active class on the <ul> element
+        }
+    </script>
 </body>
 </html>
