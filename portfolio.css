@@ -233,14 +233,52 @@ section#contact {
 }
 
 /* Add this to your existing CSS for responsive behavior */
-nav ul {
-    display: flex;
-    justify-content: space-around;
+/* Styles for mobile and tablet */
+.nav-toggle {
+    display: block; /* Hamburger icon visible on mobile/tablet */
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
 }
 
-.nav-toggle {
-    display: none;
+nav ul {
+    display: none; /* Hide menu by default on mobile */
+    list-style: none;
+    padding: 0;
 }
+
+nav ul.active {
+    display: block; /* Show menu when 'active' class is added */
+}
+
+nav ul li {
+    display: block; /* Stack the list items vertically on mobile */
+    margin: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Desktop view */
+@media (min-width: 900px) {
+    .nav-toggle {
+        display: none; /* Hide hamburger button on desktop */
+    }
+
+    nav ul {
+        display: flex; /* Display items horizontally on desktop */
+        justify-content: flex-end;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+}
+
 
 @media (max-width: 768px) {
     nav ul {
