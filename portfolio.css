@@ -164,7 +164,7 @@ section#services {
 
 /* Contact Page Styles */
 section#contact {
-    background-image: url('call.jpg');
+    background-color: lightblue;
     background-size: cover;
     background-position: center;
     color: #ffffff;
