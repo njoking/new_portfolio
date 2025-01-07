@@ -2,13 +2,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
-    color: yellowgreen;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: royalblue;
-    color: magenta;
+    background-color: #004aad; /* Deep Blue for a bold header */
+    color: #ffffff;
     padding: 1em 0;
     text-align: center;
 }
@@ -25,34 +25,19 @@ nav ul li {
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 nav a.active {
-    border-bottom: 3px solid #66b3ff;
+    border-bottom: 3px solid #00aaff;
     padding-bottom: 2px;
 }
 
 nav a:hover,
 nav a:focus {
-    color: red;
-}
-
-nav a:hover {
-    color: #66b3ff;
-}
-
-nav a:hover::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #632f58;
+    color: #00aaff;
 }
 
 section {
@@ -61,7 +46,7 @@ section {
 }
 
 h1, h2, h3, p {
-    color: #333;
+    color: #222;
 }
 
 /* Home Page Styles */
@@ -69,16 +54,18 @@ section#home {
     background-image: url('pathum-danthanarayana-kBY8uhuvnT8-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 150px 20px;
     height: 100vh;
     margin: 0;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
 }
 
 #home h1, #home p {
     margin-bottom: 20px;
-    color:rgba(82, 224, 229, 0.9);
+    color: #00d1e0;
 }
 
 #home img {
@@ -94,26 +81,23 @@ section#home {
 
 /* About Page Styles */
 section#about {
-    background-color: rgba(82, 224, 229, 0.9);
-    background-size: cover;
-    background-position: center;
-    color: brown;
+    background-color: #f8f9fa; /* Light Gray */
+    color: #333;
     text-align: center;
     padding: 100px 20px;
-    background-image: url('bulb.jpg');
 }
 
 #about h2, #about p {
     margin-bottom: 20px;
-    color: peru;
+    color: #444;
 }
 
 /* Portfolio Page Styles */
 section#portfolio {
-    background-color: indigo;
+    background-color: #004aad;
     text-align: center;
     padding: 100px 20px;
-    color: aquamarine;
+    color: #ffffff;
 }
 
 .projects-list {
@@ -128,9 +112,10 @@ section#portfolio {
 .project {
     width: 30%;
     margin-bottom: 40px;
-    background-color: lightgreen;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -145,12 +130,13 @@ section#portfolio {
 
 .project h3 {
     margin-top: 10px;
+    color: #004aad;
 }
 
 /* Services Page Styles */
 section#services {
-    background-color: navy;
-    color: white;
+    background-color: #e6f7ff; /* Soft Blue */
+    color: #004aad;
     text-align: center;
     padding: 100px 20px;
 }
@@ -164,9 +150,10 @@ section#services {
 
 .service {
     width: 30%;
-    background-color: #156582;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
@@ -175,28 +162,20 @@ section#services {
     transform: scale(1.05);
 }
 
-#services ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#services li {
-    display: inline;
-    margin: 0 20px;
-}
-
 /* Contact Page Styles */
 section#contact {
     background-image: url('call.jpg');
     background-size: cover;
     background-position: center;
-    color: #457a8d;
+    color: #ffffff;
     text-align: center;
     padding: 100px 20px;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
 }
-.contact{
-    color:#66b3ff;
+
+.contact {
+    color: #00d1e0;
 }
 
 #contact img {
@@ -211,7 +190,7 @@ section#contact {
 
 .contact-details, .contact-form {
     margin-top: 40px;
-    color:whitesmoke;
+    color: #ffffff;
 }
 
 .contact-details p {
@@ -242,15 +221,15 @@ section#contact {
 
 .contact-form button {
     padding: 10px;
-    background-color: #333;
-    color: rgb(141, 152, 60);
+    background-color: #004aad;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #66b3ff;
+    background-color: #003080;
 }
 
 /* Responsive Design */
@@ -275,18 +254,14 @@ section#contact {
         font-size: 1.5em;
     }
 
-    .service {
-        width: 100%;
-    }
-
-    .project {
+    .service, .project {
         width: 100%;
     }
 }
 
 footer {
-    background-color: yellowgreen;
-    color: white;
+    background-color: #004aad;
+    color: #ffffff;
     text-align: center;
     padding: 1em 0;
     position: fixed;
