@@ -4,7 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
-    <title>About Felister Njoki</title>
+    <title>Contact Felister Njoki</title>
+    <style>
+        .nav-toggle {
+            display: none;
+            font-size: 2em;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: royalblue;
+                padding: 0;
+                margin: 0;
+            }
+
+            nav ul.show {
+                display: block;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 2em;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: royalblue;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -15,41 +65,62 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="contact">
-        
         <h2>Contact</h2>
         <p>Feel free to reach out to me for any inquiries or collaborations.</p>
 
         <div class="contact-details">
-            <p>Email: njokingugi9462@example.com</p>
-            <p>Phone: +254115416696</p>
+            <p><strong>Email:</strong> njokingugi9462@example.com</p>
+            <p><strong>Phone:</strong> +254115416696</p>
         </div>
-    
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-form">
-                <h3>Fill in the form</h3>
-                <form action="submit_form.php" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-        
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-        
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </section>
-        
+
+        <div class="contact-form">
+            <h3>Fill in the form</h3>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/starf_elly?utm_source=qr&igsh=c2o5ZjN6c2l5MnJ3" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/ngugi_njok?t=38Ocg_vg_DpAZ3QEdZPp_Q&s=08" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://wa.me/0745980550" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/felister-njoki-815743282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/njoking" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Felister Njoki. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleNav() {
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
+
