@@ -287,3 +287,158 @@ section#contact {
         margin-left: 20px;
     }
 }
+/* === Typography Enhancements === */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* === Logo Styling === */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.highlight {
+    color: #00d1e0;
+}
+
+/* === Container Utility === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* === Hero Section Styling === */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 20px;
+    background: linear-gradient(to right, rgba(0, 74, 173, 0.7), rgba(0, 209, 224, 0.5)), url('pathum-danthanarayana-kBY8uhuvnT8-unsplash.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+/* === Call to Action Button === */
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #00d1e0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #008ca3;
+}
+
+/* === Social Icons === */
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #00d1e0;
+}
+
+/* === Scroll Down Icon === */
+.scroll-down {
+    margin-top: 40px;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* === Footer Styling === */
+footer {
+    background-color: #004aad;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .footer-content {
+    font-size: 0.95rem;
+}
+
+/* === Navigation Toggle (Mobile) === */
+.nav-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-right: 20px;
+    background: none;
+    border: none;
+}
+
+/* === Mobile Enhancements === */
+@media (max-width: 768px) {
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #004aad;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}

@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portfolio.css">
-    <title>Felister Njoki - Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Felister Njoki - Full Stack Developer Portfolio showcasing modern web projects and development services." />
+    <meta name="author" content="Felister Njoki" />
+    <title>Felister Njoki | Full Stack Developer</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <!-- Toggle button for mobile menu -->
-        <div class="nav-toggle" onclick="toggleNav()">&#9776;</div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container nav-container">
+            <h1 class="logo">Felister<span class="highlight">Njoki</span></h1>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="home">
-        <h1>Felister Njoki</h1>
-        <p>Full Stack Developer</p>
-        <!-- Add background image, or section styles in your CSS -->
-    </section>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h2>Hi, I'm <span class="highlight">Felister Njoki</span></h2>
+                <p class="tagline">A passionate Full Stack Developer crafting modern, scalable web solutions.</p>
+                <a href="portfolio.html" class="cta-button">Explore My Work</a>
+                <div class="social-icons">
+                    <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="scroll-down">
+                    <a href="#about"><i class="fas fa-chevron-down"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Felister Njoki. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 Felister Njoki. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
-        // JavaScript to toggle the navigation menu on mobile
         function toggleNav() {
-            const nav = document.querySelector('nav ul');
-            nav.classList.toggle('active'); // Toggle the active class on the <ul> element
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('active');
         }
     </script>
 </body>
