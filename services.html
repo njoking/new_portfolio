@@ -3,14 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portfolio.css">
     <title>Services | Felister Njoki</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        .services-hero {
+            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            padding: 48px 0 32px 0;
+            text-align: center;
+        }
+        .services-hero h1 {
+            font-size: 2.4rem;
+            color: #16327a;
+            margin-bottom: 10px;
+        }
+        .services-hero .subtitle {
+            color: #00bcd4;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+        .services-section {
+            max-width: 1000px;
+            margin: 32px auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+            padding: 40px 32px;
+        }
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        .service-card {
+            flex: 1 1 260px;
+            background: #f2f6fd;
+            border-radius: 12px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .service-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(0,188,212,0.10);
+        }
+        .service-card i {
+            font-size: 2.2rem;
+            color: #00bcd4;
+            margin-bottom: 12px;
+        }
+        .service-card h3 {
+            color: #16327a;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            color: #444;
+            font-size: 1.05rem;
+        }
+        @media (max-width: 800px) {
+            .services-list { flex-direction: column; gap: 18px; }
+            .service-card { padding: 20px 10px; }
+        }
+    </style>
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <!-- Toggle button for mobile menu -->
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
         <div class="nav-toggle" onclick="toggleNav()">&#9776;</div>
-
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,48 +90,46 @@
         </nav>
     </header>
 
-    <section id="services">
-        <h2>Services</h2>
-        <div class="service-container">
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <h1>My Services</h1>
+        <div class="subtitle">Delivering value through expertise and creativity</div>
+        <p style="max-width: 500px; margin: 0 auto; color: #333;">
+            I offer a range of web development and design services to help you achieve your digital goals. Whether you need a brand new website, a redesign, or ongoing support, I’m here to help.
+        </p>
+    </section>
 
-            <div class="service">
-                <h3>Web Design</h3>
-                <p><strong>Custom Website Design:</strong> Creating tailored layouts based on brand and user needs.</p>
-                <p><strong>Responsive Design:</strong> Mobile-friendly and device-agnostic experiences.</p>
-                <p><strong>UI & UX Design:</strong> Enhancing usability and visual interaction.</p>
-                <p><strong>Wireframing & Prototyping:</strong> Drafting structures before development.</p>
-                <p><strong>Graphic Design:</strong> Designing logos, banners, and web graphics.</p>
-                <p><strong>SEO-Friendly Design:</strong> Optimized to rank well in search engines.</p>
-                <p><strong>CMS Integration:</strong> WordPress, Joomla, or custom CMS solutions.</p>
+    <!-- Services Content -->
+    <section class="services-section">
+        <div class="services-list">
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Custom, responsive websites built with modern technologies for performance and scalability.</p>
             </div>
-
-            <div class="service">
-                <h3>Debugging</h3>
-                <p><strong>Identifying Errors:</strong> Diagnosing syntax, logic, or system-related issues.</p>
-                <p><strong>Log Analysis:</strong> Using logs to trace and resolve problems.</p>
-                <p><strong>Cross-Platform Debugging:</strong> Ensuring compatibility across devices and browsers.</p>
-                <p><strong>Regression Testing:</strong> Preventing new bugs while fixing old ones.</p>
-                <p><strong>Performance Optimization:</strong> Improving speed and efficiency.</p>
-                <p><strong>Collaborative Debugging:</strong> Working with teams to tackle complex issues.</p>
+            <div class="service-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>UI/UX Design</h3>
+                <p>Beautiful, user-friendly interfaces that engage visitors and enhance your brand identity.</p>
             </div>
-
-            <div class="service">
-                <h3>Coding</h3>
-                <p><strong>Web & Software Development:</strong> From websites to full-stack applications.</p>
-                <p><strong>API Integration:</strong> Enabling software to talk and share data.</p>
-                <p><strong>Bug Fixing & Maintenance:</strong> Keeping systems secure and efficient.</p>
-                <p><strong>Automation & Scripting:</strong> Automating workflows and processes.</p>
-                <p><strong>Code Review & Consulting:</strong> Improving code quality and design patterns.</p>
+            <div class="service-card">
+                <i class="fas fa-server"></i>
+                <h3>Backend Solutions</h3>
+                <p>Robust APIs, databases, and server-side logic to power your applications securely.</p>
             </div>
-
+            <div class="service-card">
+                <i class="fas fa-search"></i>
+                <h3>SEO & Optimization</h3>
+                <p>Improve your site’s visibility, speed, and accessibility for better search rankings and user experience.</p>
+            </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Felister Njoki. All rights reserved.</p>
     </footer>
-
     <script>
+        // JavaScript to toggle the navigation menu on mobile
         function toggleNav() {
             const nav = document.querySelector('nav ul');
             nav.classList.toggle('active');

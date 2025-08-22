@@ -3,79 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Felister Njoki</title>
     <link rel="stylesheet" href="portfolio.css">
-    <title>About Felister Njoki</title>
+    <style>
+        .portfolio-hero {
+            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            padding: 48px 0 32px 0;
+            text-align: center;
+        }
+        .portfolio-hero h1 {
+            font-size: 2.4rem;
+            color: #16327a;
+            margin-bottom: 10px;
+        }
+        .portfolio-hero .subtitle {
+            color: #00bcd4;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+        .portfolio-section {
+            max-width: 1100px;
+            margin: 32px auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+            padding: 40px 32px;
+        }
+        .projects-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        .project-card {
+            flex: 1 1 300px;
+            max-width: 340px;
+            background: #f2f6fd;
+            border-radius: 12px;
+            padding: 22px 16px 18px 16px;
+            text-align: left;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .project-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(0,188,212,0.10);
+        }
+        .project-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 14px;
+            background: #e0eafc;
+        }
+        .project-card h3 {
+            color: #16327a;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+        .project-card p {
+            color: #444;
+            font-size: 1.02rem;
+            margin-bottom: 10px;
+        }
+        .project-card a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: auto;
+        }
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 900px) {
+            .projects-list { flex-direction: column; gap: 18px; }
+            .portfolio-section { padding: 24px 8px; }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <!-- Toggle button for mobile menu -->
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
         <div class="nav-toggle" onclick="toggleNav()">&#9776;</div>
-
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-   <!-- ... existing code ... -->
+    <!-- Hero Section -->
+    <section class="portfolio-hero">
+        <h1>My Portfolio</h1>
+        <div class="subtitle">Selected Projects & Case Studies</div>
+        <p style="max-width: 500px; margin: 0 auto; color: #333;">
+            Explore some of my favorite web projects, showcasing my skills in design, development, and problem-solving.
+        </p>
+    </section>
 
-   <section id="portfolio">
-    <h2>Projects</h2>
-    <ul class="projects-list">
-        <li class="project">
-            <img src="my project 1.PNG" alt="Project 1">
-            <h3>Project 1</h3>
-            <p>Website development for Ace Neat Cleaning Service</p>
-            <a href="https://aceneatservices.co.ke/about-us" target="_blank" class="project-link">Visit Website</a>
-        </li>
-        <li class="project">
-            <img src="my project 2.PNG" alt="Project 2">
-            <h3>Project 2</h3>
-            <p>Website development for ServeLink Systems EA ltd</p>
-            <a href="https://servelinksystemsealtd.com" target="_blank" class="project-link">Visit Website</a>
-        </li>
-        <li class="project">
-            <img src="my project 3.PNG" alt="Project 3">
-            <h3>Project 3</h3>
-            <p>E-commerce website development for the sports brand Didge Sports</p>
-            <a href="https://www.didgesports.com" target="_blank" class="project-link">Visit Website</a>
-        </li>
-        <li class="project">
-            <img src="auto.PNG" alt="Project 4">
-            <h3>Project 3</h3>
-            <p>E-commerce website development for Auto $ Parts car accessories</p>
-            <a href="https://www.auto4parkske.co.ke" target="_blank" class="project-link">Visit Website</a>
-        </li>
-        <li class="project">
-            <img src="jocheal.PNG" alt="Project 5">
-            <h3>Project 5</h3>
-            <p>Marketing website for Jocheal Group Tours and Travel</p>
-            <a href="https://www.jochealgroup.co.ke" target="_blank" class="project-link">Visit Website</a>
-        </li>
-        <li class="project">
-            <img src="neatspace.PNG" alt="Project 6">
-            <h3>Project 6</h3>
-            <p>Communication site for neat space cleaning</p>
-            <a href="https://neatspacecleaningserviceltd.co.ke/" target="_blank" class="project-link">Visit Website</a>
-        </li>
-        <!-- Add more projects as needed -->
-    </ul>
+    <!-- Portfolio Content -->
+    <section class="portfolio-section">
+    <div class="projects-list">
+        <div class="project-card">
+            <img src="images/my project 1.PNG" alt="Project 1">
+            <h3>Business Website</h3>
+            <p>Designed and developed a responsive business website for a local startup, focusing on branding and user experience.</p>
+            <a href="https://aceneatservices.co.ke/" target="_blank">View Site</a>
+        </div>
+        <div class="project-card">
+            <img src="images/my project 3.PNG" alt="Project 2">
+            <h3>E-commerce Platform</h3>
+            <p>Built a scalable e-commerce platform with secure payments, product management, and a modern UI.</p>
+            <a href="https://didgesports.com/" target="_blank">View Site</a>
+        </div>
+        <div class="project-card">
+            <img src="images/my project 2.PNG" alt="Project 3">
+            <h3>Personal Blog</h3>
+            <p>Created a fast, SEO-friendly blog with a custom CMS and engaging, accessible design.</p>
+            <a href="https://servelinksystemsealtd.com/" target="_blank">View Site</a>
+        </div>
+        <div class="project-card">
+            <img src="images/jocheal.PNG" alt="Project 4">
+            <h3>Contact Website</h3>
+            <p>Developed a personal contact site to showcase skills, projects, and services with a modern, clean design.</p>
+            <a href="https://jochealgroup.co.ke/" target="_blank">View Site</a>
+        </div>
+        <div class="project-card">
+            <img src="images/neatspace.PNG" alt="Project 5">
+            <h3>Advertisement Platform</h3>
+            <p>Developed a dynamic advertisement platform enabling users to post, manage, and browse ads easily. Focused on intuitive navigation, user engagement, and seamless content moderation.</p>
+            <a href="https://neatspacecleaningserviceltd.co.ke/" target="_blank">View Site</a>
+        </div>
+        <div class="project-card">
+            <img src="images/WhatsApp Image 2025-08-22 at 10.58.23 AM.jpeg" alt="Project 6">
+            <h3>Website Shop</h3>
+            <p>Designed a website shop where clientss could purchase products</p>
+            <a href="https://matrixxautolights.co.ke/" target="_blank">View Site</a>
+        </div>
+    </div>
 </section>
 
-<footer>
-    <p>&copy; 2024 Felister Njoki. All rights reserved.</p>
-</footer>
-<script>
-    // JavaScript to toggle the navigation menu on mobile
-    function toggleNav() {
-        const nav = document.querySelector('nav ul');
-        nav.classList.toggle('active'); // Toggle the active class on the <ul> element
-    }
-</script>
+    <footer>
+        <p>&copy; 2024 Felister Njoki. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to toggle the navigation menu on mobile
+        function toggleNav() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

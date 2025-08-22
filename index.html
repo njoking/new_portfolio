@@ -1,61 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Felister Njoki - Full Stack Developer Portfolio showcasing modern web projects and development services." />
-    <meta name="author" content="Felister Njoki" />
-    <title>Felister Njoki | Full Stack Developer</title>
-    <link rel="stylesheet" href="portfolio.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felister Njoki | Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        .hero-main {
+            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 0 32px 0;
+        }
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .hero-left {
+            flex: 1 1 320px;
+            min-width: 280px;
+            text-align: left;
+        }
+        .hero-left h1 {
+            font-size: 2.8rem;
+            color: #16327a;
+            margin-bottom: 12px;
+        }
+        .hero-left .tagline {
+            color: #00bcd4;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .hero-left p {
+            color: #444;
+            font-size: 1.08rem;
+            margin-bottom: 28px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #00bcd4;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: background .25s, transform .1s;
+            margin-bottom: 24px;
+        }
+        .cta-button:hover { background: #0088cc; }
+        .cta-button:active { transform: translateY(1px); }
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 12px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: #16327a;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #00bcd4;
+        }
+        .hero-right {
+            flex: 1 1 260px;
+            min-width: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #00bcd4;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            background: #fff;
+        }
+        @media (max-width: 900px) {
+            .hero-content { flex-direction: column; gap: 32px; }
+            .hero-left, .hero-right { min-width: 0; }
+        }
+    </style>
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="container nav-container">
-            <h1 class="logo">Felister<span class="highlight">Njoki</span></h1>
-            <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
         </div>
+        <div class="nav-toggle" onclick="toggleNav()">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero-section">
-            <div class="hero-content">
-                <h2>Hi, I'm <span class="highlight">Felister Njoki</span></h2>
-                <p class="tagline">A passionate Full Stack Developer crafting modern, scalable web solutions.</p>
-                <a href="portfolio.html" class="cta-button">Explore My Work</a>
+    <!-- Hero Section -->
+    <section class="hero-main">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1>Felister Njoki</h1>
+                <div class="tagline">Full Stack Developer & Web Designer</div>
+                <p>
+                    I create modern, responsive, and user-focused web solutions that help brands and businesses stand out. Let's build something amazing together!
+                </p>
+                <a href="portfolio.html" class="cta-button">View My Work</a>
                 <div class="social-icons">
-                    <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
-                </div>
-                <div class="scroll-down">
-                    <a href="#about"><i class="fas fa-chevron-down"></i></a>
+                    <a href="https://github.com/njoking" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/felister-njoki-815743282" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:njokingugi9462@example.com" title="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="hero-right">
+                <img src="images/img2.jpeg" alt="Felister Njoki Photo" class="hero-photo">
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Felister Njoki. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Felister Njoki. All rights reserved.</p>
     </footer>
-
     <script>
+        // JavaScript to toggle the navigation menu on mobile
         function toggleNav() {
-            const nav = document.querySelector('.nav-links');
+            const nav = document.querySelector('nav ul');
             nav.classList.toggle('active');
         }
     </script>
